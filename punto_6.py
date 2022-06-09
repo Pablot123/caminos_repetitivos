@@ -2,39 +2,16 @@ lista_1 = ['h', 'e', 'l', 'l', 'o', '', 't', 'e', 'a', 'm']
 lista_2 = ['h', 'e', 'l', 'l', 'o', '','w', 'o', 'r', 'l', 'd']
 
 final_list = []
-
+# we iterate the first letter with all the other letters in the next list
 for i in lista_1:
     for j in lista_2:
-        if i == j and (i not in final_list):
+        # this conditinitial ask if the letters are the same and the letter
+        #  are not in the final list(this means that the letter is not repeated)
+        # add the letter to le list. 
+        if i == j and (i not in final_list): 
             final_list.append(i)
         else:
             pass
 
-
 print(final_list)
-
-
-
-
-
-""" number_of_users = int(input('Ingrese la cantidad de usuarios: '))
-
-users = []
-
-
-for i in range(number_of_users):
-    user_information = {}
-    print(f'user #{i+1} information')
-    user_information['name'] = input('Name: ')
-    user_information['age'] = input('Age: ')
-    user_information['Adress'] = input('Adress: ')
-    user_information['profession'] = input('Profession: ')
-    user_information['phone_number'] = input('Phone Number: ')
-    users.append(user_information)
-    print('\n')
-     """
-
-
-
-
 
