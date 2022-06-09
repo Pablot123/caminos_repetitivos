@@ -1,12 +1,14 @@
+#input the information, the initial distance can be taken as cero
 initial_distance = int(input('Enter the first distance in meters: '))
 final_distance = int(input('Enter the second distance in meters: '))
 time = int(input('Enter the time in seconds: '))
 
 speed = (final_distance - initial_distance)/time  #m/s
-speed_km_h = (speed*3600)/1000
+speed_km_h = (speed*3600)/1000 #Convert the speed into km/h
 
-print(speed_km_h)
+print(f'The speed was: {speed_km_h}')
 
+#conditionals for the fine by the speed
 if speed_km_h >=1 and speed_km_h <= 20:
     print('MULTA: Llamado de atencion por baja velocidad')
 elif speed_km_h >20 and speed_km_h <= 60:
@@ -14,6 +16,8 @@ elif speed_km_h >20 and speed_km_h <= 60:
 elif speed_km_h >60 and speed_km_h <= 80:
     print('MULTA: Llamado de atencion por alta velocidad')
 elif speed_km_h >80 and speed_km_h <= 120:
+    #in this fine, we need to recive a results of and alcholemic test and make conditionals for each 
+    #range of results
     alcoholemic_test_result = float(input('Enter the results of the alcoholemic test(mg ethanol/100 ml of blood): '))
     if alcoholemic_test_result >= 20 and alcoholemic_test_result <= 39:
         print('MULTA TIPO I:\n\t- Suspensión  de  la  licencia  de  conducción  entre  seis  (6)  y  doce (12) meses. ')
@@ -29,7 +33,8 @@ elif speed_km_h >80 and speed_km_h <= 120:
           y drogadicción en centros de rehabilitación debidamente  autorizados,  por  un  mínimo  de  ochenta  (80) horas.''')
 
 elif speed_km_h>120:
-    
+    #in this fine, we need to recive a results of and alcholemic test and make conditionals for each 
+    #range of results
     alcoholemic_test_result = float(input('Enter the results of the alcoholemic test(mg ethanol/100 ml of blood): '))
     if alcoholemic_test_result >= 20 and alcoholemic_test_result <= 39:
         print('MULTA TIPO II:\n\t- Inmovilizacion del vehiculo.\n\t- Suspensión  de  la  licencia  de  conducción  entre  seis  (6)  y  doce (12) meses. ')
